@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>MeetUp №6</title>
+
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+
+	<script src="libs/gsap/gsap.min.js" defer></script>
+	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/app.js" defer></script>
+
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="content">
+
+			<header class="represent-section">
+				<img data-speed=".7" class="represent" src="img/logo.png" alt="Logo" >
+				<div class="container">
+					<div data-speed=".65" class="main-header">
+						<h1 class="main-title">Testing regulations_</h1>
+					</div>
+				</div>
+			</header>
+		
+			<div class="maindata">
+				<div class="container">
+					<main class="gallery">
+	
+						<div data-speed=".9" class="gallery__left">
+		
+							<img class="gallery__item" src="img/custom/bag.jpg" alt="Memas">
+							<h3 class="text-block__h">Результаты опроса:</h3>
+						<div>
+						  <canvas id="listOfProjects"></canvas>
+						</div>
+
+						<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+						<script>
+						  const ctx = document.getElementById('listOfProjects');
+
+						  new Chart(ctx, {
+						    type: 'bar',
+						    data: {
+						      labels: ['Gold Apple', 'Просвещение', 'PUMA'],
+						      datasets: [{
+						        label: 'Количество голосов',
+						        data: [5, 2, 1],
+						        borderWidth: 3,
+						        borderColor: '#FFFFFF',
+      							backgroundColor: '#ffd700'
+						      }]
+						    },
+						    options: {
+						      scales: {
+						        y: {
+						          beginAtZero: true
+						        }
+						      }
+						    }
+						  });
+						</script>
+
+						<div>
+						<canvas id="isAvailable"></canvas>
+					    </div>
+					    <script>
+					      const ctx2 = document.getElementById('isAvailable').getContext('2d');
+					      const myChart = new Chart(ctx2, {
+					          type: 'pie',
+					          data: {
+					            labels: ["Есть регламент","Нет регламента"],
+					            datasets: [{ 
+					                data: [87.5,12.5],
+					                borderColor:[
+					                  "#FFFFFF",
+					                  "#FFFFFF",
+					                ],
+					                backgroundColor: [
+					                  "rgb(0,255,127,0.75)",
+					                  "rgb(255,215,0,0.75)",
+					                ],
+					                borderWidth:3,
+					              }]
+					          },
+					        options: {
+					          scales: {
+					            xAxes: [{ 
+					               display: false,
+					            }],
+					            yAxes: [{
+					               display: false,
+					            }],
+					          }
+					        },
+					      });
+					    </script>
+
+					    <div>
+						<canvas id="isActual"></canvas>
+					    </div>
+					    <script>
+					      const ctx3 = document.getElementById('isActual').getContext('2d');
+					      const myChart2 = new Chart(ctx3, {
+					          type: 'pie',
+					          data: {
+					            labels: ["В целом актуален","Актуален","Далёк","Нет регламента"],
+					            datasets: [{ 
+					                data: [62.5,12.5,12.5,12.5],
+					                borderColor:[
+					                  "#FFFFFF",
+					                  "#FFFFFF",
+					                  "#FFFFFF",
+					                  "#FFFFFF",
+					                ],
+					                backgroundColor: [
+					                  "rgb(60,186,159,0.75)",
+					                  "rgb(255,165,0,0.75)",
+					                  "rgb(34,113,179,0.75)",
+					                  "rgb(146,110,174,0.75)",
+					                ],
+					                borderWidth:3,
+					              }]
+					          },
+					        options: {
+					          scales: {
+					            xAxes: [{ 
+					               display: false,
+					            }],
+					            yAxes: [{
+					               display: false,
+					            }],
+					          }
+					        },
+					      });
+					    </script>
+
+					    <div>
+						<canvas id="isComfort"></canvas>
+					    </div>
+					    <script>
+					      const ctx4 = document.getElementById('isComfort').getContext('2d');
+					      const myChart3 = new Chart(ctx4, {
+					          type: 'pie',
+					          data: {
+					            labels: ["Есть нюансы","Панк","Иное"],
+					            datasets: [{ 
+					                data: [75,12.5,12.5],
+					                borderColor:[
+					                  "#FFFFFF",
+					                  "#FFFFFF",
+					                  "#FFFFFF",
+					                ],
+					                backgroundColor: [
+					                  "rgb(25,255,25,0.5)",
+					                  "rgb(255,71,145,0.75)",
+					                  "rgb(255,255,0,0.75)",
+					                ],
+					                borderWidth:3,
+					              }]
+					          },
+					        options: {
+					          scales: {
+					            xAxes: [{ 
+					               display: false,
+					            }],
+					            yAxes: [{
+					               display: false,
+					            }],
+					          }
+					        },
+					      });
+					    </script>
+
+					    <div>
+						<canvas id="isActive"></canvas>
+					    </div>
+					    <script>
+					      const ctx5 = document.getElementById('isActive').getContext('2d');
+					      const myChart4 = new Chart(ctx5, {
+					          type: 'doughnut',
+					          data: {
+					            labels: ["Есть предложения","Нет"],
+					            datasets: [{ 
+					                data: [50,50],
+					                borderColor:[
+					                  "#FFFFFF",
+					                  "#FFFFFF",
+					                ],
+					                backgroundColor: [
+					                  "rgb(255,0,0,0.75)",
+					                  "rgb(255,255,255,0.75)",
+					                ],
+					                borderWidth:3,
+					              }]
+					          },
+					        options: {
+					          scales: {
+					            xAxes: [{ 
+					               display: false,
+					            }],
+					            yAxes: [{
+					               display: false,
+					            }],
+					          }
+					        },
+					      });
+					    </script>
+		
+							<div class="text-block gallery__item">
+								<h2 class="text-block__h">Итоги опроса:</h2>
+								<ul>
+									<li>На большинстве проектов есть регламенты тестирования.</li>
+									<li>В целом нам комфортно по ним работать.</li>
+									<li>Имеется потребность в актуализации и доработке регламентов.</li>
+								</ul>
+							</div>
+		
+							<img class="gallery__item" src="img/custom/bee.png" alt="Long dance">
+		
+						</div>
+
+						<div data-speed="1.1" class="gallery__right">
+		
+							<div class="text-block gallery__item">
+								<h2 class="text-block__h">Цели нашей встречи:</h2>
+								<ul>
+ 									<li><s>Убедить сомневающихся, что регламент тестирования вещь полезная.</s></li>
+ 									<li>Мотивировать на создание регламента / актуализацию существующего.</li>
+ 									<li>Обменяться опытом успешных и не очень внедрений.</li>
+								</ul>
+							</div>
+		
+							<img class="gallery__item" src="img/custom/fact1.png" alt="kek one">
+							<img class="gallery__item" src="img/custom/fact2.png" alt="kek two">
+						<p class="text-block__p">Для опоздавших:</p>
+						<div class="wrapper-form">
+  							<form action="https://forms.gle/MCiowcbUQNN7i2ct7?" method="post">
+    					<div class="field">
+      						<input type="text" id="name" name="Name" maxlength="0" placeholder="Имя занятого человека"/>
+      						<label for="name">Имя</label>
+    					</div>
+   						<div class="field">
+      						<textarea id="msg" rows="4" name="Msg" maxlength="256" placeholder="Печальная история почему не нашлось 3х минут на опрос:("></textarea>
+      						<label for="msg">Текст</label>
+    					</div>
+    						<input class="button" type="submit" value="Дополнить статистику" />
+  							</form>
+
+						</div>
+
+						<div class="text-block gallery__item">
+								<h2 class="text-block__h">План мероприятия:</h2>
+								<ul>
+ 									<li>Душное вступление.</li>
+ 									<li>Основная часть.</li>
+ 									<li>Подведение итогов.</li>
+								</ul>
+							</div>
+
+					</main>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<footer>&copy; 2023 /  QA MeetUp № 6</footer>
+
+</body>
+</html>
