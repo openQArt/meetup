@@ -41,7 +41,7 @@
 							<img class="gallery__item" src="img/custom/bag.jpg" alt="Memas">
 							<h3 class="text-block__h">Результаты опроса:</h3>
 						<div>
-						  <canvas id="listOfProjects"></canvas>
+						  <canvas id="listOfProjects" width="250" height="200"></canvas>
 						</div>
 
 						<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -54,7 +54,7 @@
 						    data: {
 						      labels: ['Gold Apple', 'Просвещение', 'PUMA'],
 						      datasets: [{
-						        label: 'Количество голосов',
+						        label: 'Голоса',
 						        data: [5, 2, 1],
 						        borderWidth: 3,
 						        borderColor: '#FFFFFF',
@@ -62,12 +62,14 @@
 						      }]
 						    },
 						    options: {
-						      scales: {
-						        y: {
-						          beginAtZero: true
-						        }
-						      }
-						    }
+        						plugins: {
+            						title: {
+                					display: true,
+                					text: 'Проекты участников',
+                					color : '#ffffff'
+            								}
+        								}
+    								}
 						  });
 						</script>
 
@@ -87,22 +89,22 @@
 					                  "#FFFFFF",
 					                ],
 					                backgroundColor: [
-					                  "rgb(0,255,127,0.75)",
-					                  "rgb(255,215,0,0.75)",
+					                  "rgb(0,255,127,1)",
+					                  "rgb(255,215,0,1)",
 					                ],
 					                borderWidth:3,
 					              }]
 					          },
 					        options: {
-					          scales: {
-					            xAxes: [{ 
-					               display: false,
-					            }],
-					            yAxes: [{
-					               display: false,
-					            }],
-					          }
-					        },
+        						plugins: {
+            						title: {
+                					display: true,
+                					text: 'Наличие регламента',
+                					color : '#ffffff'
+            								}
+        								}
+    								}
+
 					      });
 					    </script>
 
@@ -112,7 +114,7 @@
 					    <script>
 					      const ctx3 = document.getElementById('isActual').getContext('2d');
 					      const myChart2 = new Chart(ctx3, {
-					          type: 'pie',
+					          type: 'doughnut',
 					          data: {
 					            labels: ["В целом актуален","Актуален","Далёк","Нет регламента"],
 					            datasets: [{ 
@@ -124,24 +126,23 @@
 					                  "#FFFFFF",
 					                ],
 					                backgroundColor: [
-					                  "rgb(60,186,159,0.75)",
-					                  "rgb(255,165,0,0.75)",
-					                  "rgb(34,113,179,0.75)",
-					                  "rgb(146,110,174,0.75)",
+					                  "rgb(60,186,159,1)",
+					                  "rgb(255,165,0,1)",
+					                  "rgb(34,113,179,1)",
+					                  "rgb(146,110,174,1)",
 					                ],
 					                borderWidth:3,
 					              }]
 					          },
 					        options: {
-					          scales: {
-					            xAxes: [{ 
-					               display: false,
-					            }],
-					            yAxes: [{
-					               display: false,
-					            }],
-					          }
-					        },
+        						plugins: {
+            						title: {
+                					display: true,
+                					text: 'Актуальность регламента',
+                					color : '#ffffff'
+            								}
+        								}
+    								}
 					      });
 					    </script>
 
@@ -162,23 +163,22 @@
 					                  "#FFFFFF",
 					                ],
 					                backgroundColor: [
-					                  "rgb(25,255,25,0.5)",
-					                  "rgb(255,71,145,0.75)",
-					                  "rgb(255,255,0,0.75)",
+					                  "rgb(0,153,0,1)",
+					                  "rgb(255,71,145,1)",
+					                  "rgb(255,255,0,1)",
 					                ],
 					                borderWidth:3,
 					              }]
 					          },
 					        options: {
-					          scales: {
-					            xAxes: [{ 
-					               display: false,
-					            }],
-					            yAxes: [{
-					               display: false,
-					            }],
-					          }
-					        },
+        						plugins: {
+            						title: {
+                					display: true,
+                					text: 'Комфорт работы',
+                					color : '#ffffff'
+            								}
+        								}
+    								}
 					      });
 					    </script>
 
@@ -198,22 +198,21 @@
 					                  "#FFFFFF",
 					                ],
 					                backgroundColor: [
-					                  "rgb(255,0,0,0.75)",
-					                  "rgb(255,255,255,0.75)",
+					                  "rgb(254,254,34,1)",
+					                  "rgb(255,140,105,1)",
 					                ],
 					                borderWidth:3,
 					              }]
 					          },
 					        options: {
-					          scales: {
-					            xAxes: [{ 
-					               display: false,
-					            }],
-					            yAxes: [{
-					               display: false,
-					            }],
-					          }
-					        },
+        						plugins: {
+            						title: {
+                					display: true,
+                					text: 'Наличие предложений',
+                					color : '#ffffff'
+            								}
+        								}
+    								}
 					      });
 					    </script>
 		
@@ -266,6 +265,71 @@
  									<li>Основная часть.</li>
  									<li>Подведение итогов.</li>
 								</ul>
+							</div>
+							<div class="text-block gallery__item">
+								<h2 class="text-block__h">LETS BINGO!</h2>
+
+									<table style="border: 2px inset rgb(255, 221, 0);">
+									  <tbody>
+									    <tr>
+									      <td style="border: 2px inset rgb(255, 221, 0);">ndm788</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">jbiurj</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">ous5gt</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">d51czf</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">ng0npb</td>
+									    </tr>
+									    <tr>
+									      <td style="border: 2px inset rgb(255, 221, 0);">bnp54</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">rle63l</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">uy5uik</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">xnwfp8</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">fdndw</td>
+									    </tr>
+									    <tr>
+									      <td style="border: 2px inset rgb(255, 221, 0);">9j18ld</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">gfkqu5</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">azqn3</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">my6pos</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">n0lbw</td>
+									    </tr>
+									    <tr>
+									      <td style="border: 2px inset rgb(255, 221, 0);">h192pv</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">4ztv4</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">l1lzk1</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">72wk0n</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">z1rcrc</td>
+									    </tr>
+									    <tr>
+									      <td style="border: 2px inset rgb(255, 221, 0);">tnvmi</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">4qemwc</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">t8900d</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">wtpxuu</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">xsad0t</td>
+									    </tr>
+									    <tr>
+									      <td style="border: 2px inset rgb(255, 221, 0);">057npd</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">a19fi8</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">no4ns</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">8thcb9</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">tx1md3</td>
+									    </tr>
+									    <tr>
+									      <td style="border: 2px inset rgb(255, 221, 0);">dg0k9i</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">kcbit6</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">vzq5vr</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">95xwkt</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">f504aa</td>
+									    </tr>
+									    <tr>
+									      <td style="border: 2px inset rgb(255, 221, 0);">lu5thr</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">ihkm4</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">jj030m</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">naihlp</td>
+									      <td style="border: 2px inset rgb(255, 221, 0);">etenf</td>
+									    </tr>
+									  </tbody>
+									</table>
+
 							</div>
 
 					</main>
