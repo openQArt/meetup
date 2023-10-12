@@ -176,3 +176,34 @@ form input[type="submit"]:hover,
 form input[type="submit"]:focus {
   background: #FFD800;  
 }
+.bingo {
+	border-collapse: collapse;
+	border-spacing: 2;
+	width: 100%;
+}
+.bingo td {
+	border: 2px solid #888;
+	padding: 10px;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+	cursor: pointer;
+}
+.bingo td:hover:after {
+	content: '';
+	position: absolute;
+	top: 0px;
+	right: 0px; 
+	bottom: 0px;    
+	left: 0px;
+	border: 4px solid #ffebb8;
+}
+.bingo td.active:after {
+	content: '';
+	position: absolute;
+	top: 0px;
+	right: 0px; 
+	bottom: 0px;    
+	left: 0px;
+	border: 5px solid yellow !important;
+}
